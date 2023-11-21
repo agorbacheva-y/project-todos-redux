@@ -12,13 +12,15 @@ export const todos = createSlice({
   initialState: todoData,
   reducers: {
     addTodo: (state, action) => {
-      state.push({
-        id: uuidv4(),
-        text: action.payload,
-        completed: false,
-        created: "",
-        due: ""
-      })
+      return [ ...state, 
+       {
+          id: uuidv4(),
+          text: action.payload,
+          completed: false,
+          created: "",
+          due: ""
+        }
+      ];
     },
     removeTodo: (state, action) => {
       const existingTodo = state.todoData.find((todo) => todo.id === action.payload.id);
