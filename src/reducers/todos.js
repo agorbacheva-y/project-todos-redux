@@ -11,7 +11,7 @@ export const todos = createSlice({
   name: 'todos',
   initialState: todoData,
   reducers: {
-    addTodo: (state, action) => {
+    addTodo: (state, action) => { //will add new todo for a second, but then disappears???
       return [ ...state, 
        {
           id: uuidv4(),
