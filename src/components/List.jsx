@@ -1,9 +1,14 @@
-import React from 'react';
+import { useSelector } from "react-redux";
+import Todo from './Todo';
 
 const List = () => {
+  const todos = useSelector((store) => store.todos);
+
   return (
     <div>
-      list of todos
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
     </div>
   );
 };
