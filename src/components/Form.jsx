@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { todos } from '../reducers/todos';
 import { useDispatch } from 'react-redux';
+import './Form.css';
 
 const Form = () => {
   const [ newTask, setNewTask ] = useState("");
@@ -13,10 +14,10 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='formContainer'>
+      <form onSubmit={handleSubmit} className='formInput'>
         <label>
-          <p>Task</p>
+          <p>Add Todo</p>
           <input 
             type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)}  
           />
