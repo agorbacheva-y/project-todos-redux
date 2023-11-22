@@ -6,9 +6,15 @@ const Form = () => {
   const [ newTask, setNewTask ] = useState("");
   const dispatch = useDispatch();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(todos.actions.addTodo(newTask));
+    setNewTask("");
+  };
+
   return (
     <div>
-      <form onSubmit={(e) => dispatch(todos.actions.addTodo(newTask)) }>
+      <form onSubmit={handleSubmit}>
         <label>
           <p>Task</p>
           <input 
