@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { todos } from '../reducers/todos';
+import { todos } from '../reducers/todoSlice';
 import { useDispatch } from 'react-redux';
 import './Form.css';
 

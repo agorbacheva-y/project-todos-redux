@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import Form from './components/Form';
 import List from './components/List';
+import HideCompleted from './components/HideCompleted';
 import { store } from './store';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
       <Provider store={store} >
         <Form />
+        <HideCompleted />
         <List />
       </Provider>
     </div>
