@@ -8,8 +8,14 @@ const Todo = ({ todo }) => {
 
   return (
     <div className="todoContainer">
-      <span>{todo.text}</span>
-      <DeleteIcon onClick={() => dispatch(todos.actions.removeTodo(todo))} />
+      <div className="todoItem">
+        <span>{todo.text}</span>
+        <DeleteIcon onClick={() => dispatch(todos.actions.removeTodo(todo))} />
+      </div>
+      <form>
+        <input type="checkbox" id="completed" name="completed"/>
+        <label htmlFor="completed">Completed</label>
+      </form>
     </div>
   );
 };
