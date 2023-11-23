@@ -14,7 +14,7 @@ const Todo = ({ todo }) => {
     <div className="todoContainer">
       <div className="todoItem">
         <span>{todo.text}</span>
-        <DeleteIcon onClick={() => dispatch(removeTodo(todo))} />
+        <DeleteIcon style={{ color: "gray" }}onClick={() => dispatch(removeTodo(todo))} />
       </div>
       <form>
         <input type="checkbox" id="completed" onChange={handleChange}/>
