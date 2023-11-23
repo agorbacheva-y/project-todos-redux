@@ -1,10 +1,8 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { todos } from "./reducers/todoSlice";
-import { hide } from "./reducers/hideSlice";
+import todoReducer from "./reducers/todoSlice";
 
 const reducer = combineReducers({
-  todos: todos.reducer,
-  hide: hide.reducer
+  todos: todoReducer,
 });
 
 export const store = configureStore({ reducer });

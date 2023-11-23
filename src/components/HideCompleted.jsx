@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { hide } from '../reducers/hideSlice';
 import './HideCompleted.css';
 
 const HideCompleted = () => {
-  const hide = useSelector((store) => store.hide);
+  const completed = useSelector((store) => store.todos);
+
   const dispatch = useDispatch();
 
   return (

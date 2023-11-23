@@ -7,7 +7,7 @@ const todoData = [
   {id: uuidv4(), text: "Christmas shopping", completed: false, created: "", due: "" },
 ];
 
-export const todos = createSlice({
+const todoSlice = createSlice({
   name: 'todos',
   initialState: todoData,
   reducers: {
@@ -22,6 +22,16 @@ export const todos = createSlice({
     },
     removeTodo: (state, action) => {
       return state.filter((todo) => todo.id !== action.payload.id);
+    },
+    isCompleted: (state, action) => {
+      // find index of todo item to update
+      const index = state.findIndex(todo => todo.id === action.payload.id);
+      if (index !== -1) {
+        state[index].completed = !state[index].completed;
       }
     }
+  }
 });
+
+export const { addTodo, removeTodo, isCompleted } = todoSlice.actions;
+export default todoSlice.reducer;

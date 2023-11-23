@@ -1,24 +1,20 @@
-import { useSelector, useDispatch } from "react-redux";
-import { todos } from "../reducers/todoSlice";
-import  { hide } from "../reducers/hideSlice";
+import { useDispatch } from "react-redux";
+import { removeTodo, isCompleted } from "../reducers/todoSlice";
 import DeleteIcon from "@mui/icons-material/Delete";
 import './List.css';
 
 const Todo = ({ todo }) => {
-  const hidden = useSelector((store) => store.hide);
-
   const dispatch = useDispatch();
 
   const handleChange = () => {
-    dispatch(hide.actions.isCompleted());
-    console.log(hidden);
+    dispatch(isCompleted({ id: todo.id }));
   }
 
   return (
     <div className="todoContainer">
       <div className="todoItem">
         <span>{todo.text}</span>
-        <DeleteIcon onClick={() => dispatch(todos.actions.removeTodo(todo))} />
+        <DeleteIcon onClick={() => dispatch(removeTodo(todo))} />
       </div>
       <form>
         <input type="checkbox" id="completed" onChange={handleChange}/>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { todos } from '../reducers/todoSlice';
+import { addTodo } from '../reducers/todoSlice';
 import { useDispatch } from 'react-redux';
 import './Form.css';
 
@@ -9,7 +9,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(todos.actions.addTodo(newTask));
+    dispatch(addTodo(newTask));
     setNewTask("");
   };
 
