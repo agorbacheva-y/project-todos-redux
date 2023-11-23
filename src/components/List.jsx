@@ -8,13 +8,14 @@ const List = () => {
   const todos = useSelector((store) => store.todos);
 
   const handleClick = () => {
-    setIsHidden(true);
+    // state changes back after second click
+    setIsHidden(prev => prev === false ? true : false);
   }
 
   return (
     <>
       <div className='hideBtn'>
-        <button onClick={handleClick}>Hide completed</button>
+        <button onClick={handleClick}>{isHidden ? <p>Show completed</p> : <p>Hide completed</p>}</button>
       </div>
 
       <div className="listContainer">
