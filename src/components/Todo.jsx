@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { removeTodo, isCompleted } from "../reducers/todoSlice";
 import DeleteIcon from "@mui/icons-material/Delete";
 import './List.css';

@@ -1,14 +1,16 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './HideCompleted.css';
 
 const HideCompleted = () => {
-  const completed = useSelector((store) => store.todos);
+  const todos = useSelector((store) => store.todos);
 
-  const dispatch = useDispatch();
+  const handleClick = () => {
+    
+  }
 
   return (
     <div className='hideBtn'>
-      <button>Hide completed</button>
+      <button onClick={handleClick}>Hide completed</button>
     </div>
   );
 };
