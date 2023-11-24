@@ -50,9 +50,14 @@ const todoSlice = createSlice({
       if (index !== -1) {
         state[index].completed = !state[index].completed;
       }
+    },
+    completeAll: (state, action) => {
+      state.forEach((todo) => {
+        todo.completed = action.payload;
+      })
     }
   },
 });
 
-export const { addTodo, removeTodo, isCompleted } = todoSlice.actions;
+export const { addTodo, removeTodo, isCompleted, completeAll } = todoSlice.actions;
 export default todoSlice.reducer;
