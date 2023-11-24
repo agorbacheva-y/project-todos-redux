@@ -51,9 +51,9 @@ const todoSlice = createSlice({
         state[index].completed = !state[index].completed;
       }
     },
-    completeAll: (state, action) => {
+    completeAll: (state) => {
       state.forEach((todo) => {
-        todo.completed = action.payload;
+        todo.completed = true ;
       })
     }
   },

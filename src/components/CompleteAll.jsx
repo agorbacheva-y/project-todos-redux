@@ -7,11 +7,11 @@ const CompleteAll = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(completeAll(true));
+    dispatch(completeAll());
   };
 
   return (
-    <div>
+    <div className="completeAll">
       <button onClick={handleClick}>Complete all</button>
     </div>
   );

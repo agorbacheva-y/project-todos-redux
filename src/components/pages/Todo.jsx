@@ -20,7 +20,7 @@ const Todo = ({ todo }) => {
         <span>created: {todo.created}</span>
       </div>
       <form>
-        <input type="checkbox" id="completed" onChange={handleChange}/>
+        <input type="checkbox" id="completed" checked={todo.completed} onChange={handleChange}/>
         <label htmlFor="completed">Completed</label>
       </form>
     </div>

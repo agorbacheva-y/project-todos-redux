@@ -1,4 +1,10 @@
-button {
+.completeAll {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.completeAll button {
   background-color: rgb(112, 51, 202);
   border: none;
   border-radius: 20px;
