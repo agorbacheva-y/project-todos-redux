@@ -7,7 +7,7 @@ const Todo = ({ todo }) => {
   const dispatch = useDispatch();
 
   const handleChange = () => {
-    dispatch(isCompleted({ id: todo.id }));
+    dispatch(isCompleted({ id: todo.id}));
   }
 
   return (

@@ -3,3 +3,16 @@
   justify-content: center;
   margin: 0 1rem;
 }
+
+.completeImg  {
+  max-width: 50%;
+  margin: 3rem auto;
+}
+
+.completeImg img {
+  width: 100%;
+}
+
+.completeImg p {
+  text-align: center;
+}
