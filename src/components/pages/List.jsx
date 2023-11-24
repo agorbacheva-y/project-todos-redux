@@ -5,7 +5,7 @@ import Completed from "../Completed";
 import './List.css';
 
 const List = () => {
-  const [ isHidden, setIsHidden ] = useState(false);
+  const [ isHidden, setIsHidden ] = useState(true);
   const todos = useSelector((store) => store.todos);
 
   const handleClick = () => {
