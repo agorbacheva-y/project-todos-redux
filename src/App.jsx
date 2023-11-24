@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
-import Form from './components/Form';
-import List from './components/List';
+import Form from './components/pages/Form';
+import List from './components/pages/List';
 import { store } from './store';
 
 const App = () => {

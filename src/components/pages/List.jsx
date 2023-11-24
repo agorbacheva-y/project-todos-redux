@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Todo from './Todo';
-import Completed from "./Completed";
+import Completed from "../Completed";
 import './List.css';
 
 const List = () => {

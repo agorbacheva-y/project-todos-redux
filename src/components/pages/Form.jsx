@@ -1,16 +1,25 @@
 import { useState } from 'react';
-import { addTodo } from '../reducers/todoSlice';
+import { addTodo } from '../../reducers/todoSlice';
 import { useDispatch } from 'react-redux';
 import './Form.css';
 
 const Form = () => {
   const [ newTask, setNewTask ] = useState("");
+  const [ currentTime, setCurrentTime ] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo(newTask));
+    dispatch(addTodo({ text: newTask, time: currentTime } ));
     setNewTask("");
+  };
+
+  const handleClick = () => {
+    let timeCreated = new Date().toLocaleTimeString('sv-SE');
+    let dateCreated = new Date().toLocaleDateString('sv-SE');
+    let timestamp = `${dateCreated} at ${timeCreated}`;
+
+    setCurrentTime(timestamp);
   };
 
   return (
@@ -22,7 +31,7 @@ const Form = () => {
             type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)}  
           />
         </label>
-        <button type="submit">add todo</button>
+        <button type="submit" onClick={handleClick}>add todo</button>
       </form>
     </div>
   );

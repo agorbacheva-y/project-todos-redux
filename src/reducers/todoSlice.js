@@ -34,9 +34,9 @@ const todoSlice = createSlice({
         ...state,
         {
           id: uuidv4(),
-          text: action.payload,
+          text: action.payload.text,
           completed: false,
-          created: "",
+          created: action.payload.time,
           due: "",
         },
       ];
@@ -50,7 +50,7 @@ const todoSlice = createSlice({
       if (index !== -1) {
         state[index].completed = !state[index].completed;
       }
-    },
+    }
   },
 });
 
