@@ -29,10 +29,11 @@ const Form = () => {
         <label>
           <p>Add Todo</p>
           <input 
-            type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)}  
+            type="text" required value={newTask} onChange={(e) => setNewTask(e.target.value)}  
           />
         </label>
-        <div>
+        <div className='formDueDate'>
+          <label>Due: </label>
           <DatePicker selected={date} onChange={(date) => setDate(date)} />
         </div>
         <button type="submit" onClick={handleClick}>add todo</button>

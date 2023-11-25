@@ -37,3 +37,7 @@
   padding: 0.5rem;
   color: white;
 }
+
+.formDueDate {
+  display: flex;
+}
