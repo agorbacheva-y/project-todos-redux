@@ -17,7 +17,8 @@ const Todo = ({ todo }) => {
         <DeleteIcon style={{ color: "gray" }}onClick={() => dispatch(removeTodo(todo))} />
       </div>
       <div>
-        <span>created: {todo.created}</span>
+        <p>created: {todo.created}</p>
+        <p>due: {todo.due}</p>
       </div>
       <form>
         <input type="checkbox" id="completed" checked={todo.completed} onChange={handleChange}/>

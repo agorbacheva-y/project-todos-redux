@@ -6,22 +6,22 @@ const todoData = [
     id: uuidv4(),
     text: "14:00 Dentist",
     completed: false,
-    created: "",
-    due: "",
+    created: "2023-11-01",
+    due: "2023-11-15",
   },
   {
     id: uuidv4(),
     text: "Ship package",
     completed: false,
-    created: "",
-    due: "",
+    created: "2023-11-05",
+    due: "2023-11-30",
   },
   {
     id: uuidv4(),
     text: "Christmas shopping",
     completed: false,
-    created: "",
-    due: "",
+    created: "2023-11-10",
+    due: "2023-12-15",
   },
 ];
 
@@ -37,7 +37,7 @@ const todoSlice = createSlice({
           text: action.payload.text,
           completed: false,
           created: action.payload.time,
-          due: "",
+          due: action.payload.due,
         },
       ];
     },
