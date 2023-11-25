@@ -8,13 +8,15 @@
 
 # Project Todos
 
-Replace this readme with your own information about your project.
+Technigo Week 9 Project - Ayumi Gorbacheva-Yamamoto
+This week I decided to do the project alone in order to make myself tackle all the tasks and check that I truly understood how to use redux instead of relying on my teammates.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a todo app using Redux and Redux Toolkit.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started the project by creating a basic version of a todo app, with an add and remove todo action to practice reducers.
+Additional features were added one by one by using either redux or local state if it affected only the local component.
 
 ## View it live
 
