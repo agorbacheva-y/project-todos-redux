@@ -9,12 +9,16 @@ const Form = () => {
   const [ newTask, setNewTask ] = useState("");
   const [ currentTime, setCurrentTime ] = useState("");
   const [ date, setDate ] = useState(new Date());
+  const [ priority, setPriority ] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo({ text: newTask, time: currentTime, due: date.toLocaleDateString('sv-SE') } ));
+    dispatch(addTodo({ text: newTask, time: currentTime, due: date.toLocaleDateString('sv-SE'), priority: priority } ));
     setNewTask("");
+    setCurrentTime("");
+    setDate(new Date());
+    setPriority("");
   };
 
   const handleClick = () => {
@@ -32,6 +36,17 @@ const Form = () => {
             type="text" required value={newTask} onChange={(e) => setNewTask(e.target.value)}  
           />
         </label>
+
+        <div>
+          <label>Select priority: </label>
+          <select onChange={(e) => setPriority(e.target.value)} >
+            <option defaultValue="" hidden>---Select---</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        </div>
+        
         <div className='formDueDate'>
           <label>Due: </label>
           <DatePicker selected={date} onChange={(date) => setDate(date)} />

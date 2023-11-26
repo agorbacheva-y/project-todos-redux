@@ -27,8 +27,9 @@ const Todo = ({ todo }) => {
         <DeleteIcon style={{ color: "gray" }}onClick={() => dispatch(removeTodo(todo))} />
       </div>
       <div>
-        <p>created: {todo.created}</p>
-        <p>due: {todo.due}</p>
+        <p>Priority: {todo.priority}</p>
+        <p>Created: {todo.created}</p>
+        <p>Due: {todo.due}</p>
         <p style={{ display: pastDue ? "flex" : "none", color: "red" }}>Past Due!</p>
       </div>
       <form>

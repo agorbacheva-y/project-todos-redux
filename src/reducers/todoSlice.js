@@ -8,6 +8,7 @@ const todoData = [
     completed: false,
     created: "2023-11-01",
     due: "2023-11-15",
+    priority: "high"
   },
   {
     id: uuidv4(),
@@ -15,6 +16,7 @@ const todoData = [
     completed: false,
     created: "2023-11-05",
     due: "2023-11-30",
+    priority: "medium"
   },
   {
     id: uuidv4(),
@@ -22,6 +24,7 @@ const todoData = [
     completed: false,
     created: "2023-11-10",
     due: "2023-12-15",
+    priority: "high"
   },
 ];
 
@@ -38,6 +41,7 @@ const todoSlice = createSlice({
           completed: false,
           created: action.payload.time,
           due: action.payload.due,
+          priority: action.payload.priority
         },
       ];
     },
