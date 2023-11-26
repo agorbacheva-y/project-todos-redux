@@ -8,7 +8,7 @@ const todoData = [
     completed: false,
     created: "2023-11-01",
     due: "2023-11-15",
-    priority: "high"
+    priority: "high",
   },
   {
     id: uuidv4(),
@@ -16,7 +16,7 @@ const todoData = [
     completed: false,
     created: "2023-11-05",
     due: "2023-11-30",
-    priority: "medium"
+    priority: "medium",
   },
   {
     id: uuidv4(),
@@ -24,7 +24,7 @@ const todoData = [
     completed: false,
     created: "2023-11-10",
     due: "2023-12-15",
-    priority: "high"
+    priority: "high",
   },
 ];
 
@@ -41,7 +41,7 @@ const todoSlice = createSlice({
           completed: false,
           created: action.payload.time,
           due: action.payload.due,
-          priority: action.payload.priority
+          priority: action.payload.priority,
         },
       ];
     },
@@ -57,11 +57,12 @@ const todoSlice = createSlice({
     },
     completeAll: (state) => {
       state.forEach((todo) => {
-        todo.completed = true ;
-      })
-    }
+        todo.completed = true;
+      });
+    },
   },
 });
 
-export const { addTodo, removeTodo, isCompleted, completeAll } = todoSlice.actions;
+export const { addTodo, removeTodo, isCompleted, completeAll } =
+  todoSlice.actions;
 export default todoSlice.reducer;

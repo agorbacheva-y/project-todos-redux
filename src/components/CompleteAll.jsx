@@ -9,7 +9,7 @@ const CompleteAll = () => {
   const dispatch = useDispatch();
   const todos = useSelector((store) => store.todos);
 
-  const [ allCompleted, setAllCompleted ] = useState(false);
+  const [allCompleted, setAllCompleted] = useState(false);
 
   useEffect(() => {
     if (todos.every((todo) => todo.completed === true)) {
@@ -17,7 +17,7 @@ const CompleteAll = () => {
     } else {
       setAllCompleted(false);
     }
-  },[todos]);
+  }, [todos]);
 
   const handleClick = () => {
     dispatch(completeAll());
