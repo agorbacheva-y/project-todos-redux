@@ -9,7 +9,6 @@
 # Project Todos
 
 Technigo Week 9 Project - Ayumi Gorbacheva-Yamamoto
-This week I decided to do the project alone in order to make myself tackle all the tasks and check that I truly understood how to use redux instead of relying on my teammates.
 
 The assignment was to create a todo app using Redux and Redux Toolkit.
 
